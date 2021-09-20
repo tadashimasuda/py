@@ -140,6 +140,11 @@ print(r)
 r = [i for i in t if i % 2==0]
 print(r)
 
+w = ['mon','tue','wed']
+f = ['coffee','milk','water']
+
+d = {x:y for x,y in zip(w,f)}
+print(d)
 
 
 
