@@ -49,5 +49,9 @@ print('#######')
 # for _ in range(10):
 #     print(_)
 
+items = ['A','B','C']
+
+for i,item in enumerate(items):
+    print(i,item)
 
 
