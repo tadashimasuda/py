@@ -95,3 +95,28 @@ d = {
 }
 something(**d)
 something(D='d',E='e')
+
+def outer(a,b):
+
+    def plus(c,d):
+        return c+d
+
+    r1 = plus(a,b)
+    r2 = plus(b,a)
+    print(r1+r2)
+
+outer(1,2)
+
+l = ['Mon','tue','Wed','Thu','fri','sat','Sun']
+
+def change_words(words,func):
+    for word in words:
+        print(func(word))
+
+# def cap_func(word):
+#     return word.capitalize()
+
+cap_func = lambda word:word.capitalize()
+
+change_words(l,cap_func)
+
