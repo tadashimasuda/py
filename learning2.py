@@ -54,4 +54,44 @@ items = ['A','B','C']
 for i,item in enumerate(items):
     print(i,item)
 
+print('#######')
 
+days = ['Mon','Tue','Wed']
+fruits = ['apple','banana','orange']
+drinks = ['coffee','tea','beer']
+
+for day,fruit,drink in zip(days,fruits,drinks):
+    print(day,fruit,drink)
+
+d = {'x':100,'y':200}
+print(d.items())
+
+for k,v in d.items():
+    print(k,':',v)
+
+def add_num(a:int,b:int) -> int:
+    return a+b
+
+r = add_num(10,20)
+print(r)
+
+def say_something(*args):
+    print(args)
+
+say_something('Hi','Mike','Nance')
+
+def say_something2(word,*args):
+    print(word,args)
+
+say_something2('Hi','Mike','Nance')
+
+def something(**kwargs):
+    print(kwargs)
+
+d = {
+    'A':'a',
+    'B':'b',
+    'C':'c'
+}
+something(**d)
+something(D='d',E='e')
