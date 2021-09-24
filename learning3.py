@@ -13,11 +13,11 @@ class Person(object):
     def __del__(self):
         print('good bye')
 
-person = Person('Mike')
-person.say_somthing()
+# person = Person('Mike')
+# person.say_somthing()
 
-del person
-print('#####')
+# del person
+# print('#####')
 
 class Car(object):
     def __init__(self,model=None):
@@ -80,8 +80,30 @@ class Adult(Person):
         else:
             raise ValueError
 
-baby = Baby()
-adult = Adult()
+# baby = Baby()
+# adult = Adult()
+#
+# car = Car()
+# car.ride(adult)
 
-car = Car()
-car.ride(adult)
+class Word(object):
+    def __init__(self,text):
+        self.text = text
+
+    def __str__(self):
+        return 'Word!!!!!'
+
+    def __len__(self):
+        return len(self.text)
+
+    def __add__(self,word):
+        return self.text.lower() + self.text.lower()
+
+w = Word('test')
+w2 = Word('test')
+
+print(w.text)
+print(w)
+
+print(len(w.text))
+print(len(w))
